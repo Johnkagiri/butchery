@@ -1,0 +1,137 @@
+{
+  "data": [
+    {
+      "id": 1,
+      "date": "",
+      "beef": {
+        "openingstock": 0,
+        "closingstock": 0,
+        "sellingprice": 0,
+        "buyingprice": 0,
+        "waste": 0,
+        "debts": 0,
+        "sales": 0,
+        "comments": "",
+        "expectedsales": 0,
+        "less": 0,
+        "excess": 0,
+        "actualprofit": 0,
+        "expectedprofit": 0
+      },
+      "pork": {
+        "openingstock": 0,
+        "closingstock": 0,
+        "sellingprice": 0,
+        "buyingprice": 0,
+        "waste": 0,
+        "debts": 0,
+        "sales": 0,
+        "comments": "",
+        "expectedsales": 0,
+        "less": 0,
+        "excess": 0,
+        "actualprofit": 0,
+        "expectedprofit": 0
+      },
+      "chicken": {
+        "openingstock": 0,
+        "closingstock": 0,
+        "sellingprice": 0,
+        "buyingprice": 0,
+        "waste": 0,
+        "debts": 0,
+        "sales": 0,
+        "comments": "",
+        "expectedsales": 0,
+        "less": 0,
+        "excess": 0,
+        "actualprofit": 0,
+        "expectedprofit": 0
+      },
+      "mutton": {
+        "openingstock": 0,
+        "closingstock": 0,
+        "sellingprice": 0,
+        "buyingprice": 0,
+        "waste": 0,
+        "debts": 0,
+        "sales": 0,
+        "comments": "",
+        "expectedsales": 0,
+        "less": 0,
+        "excess": 0,
+        "actualprofit": 0,
+        "expectedprofit": 0
+      }
+    },
+    [
+      {
+        "id": "1",
+        "date": "4/august/2023",
+        "beef": {
+          "openingstock": "0",
+          "closingstock": "0",
+          "sellingprice": "0",
+          "buyingprice": "0",
+          "waste": "0",
+          "debts": "0",
+          "sales": "0",
+          "comments": "",
+          "expectedsales": 0,
+          "less": 0,
+          "excess": 0,
+          "actualprofit": 0,
+          "expectedprofit": 0
+        },
+        "pork": {
+          "id": "1",
+          "openingstock": "",
+          "closingstock": "",
+          "sellingprice": "0",
+          "buyingprice": "0",
+          "waste": "0",
+          "debts": "0",
+          "sales": "0",
+          "comments": "",
+          "expectedsales": 0,
+          "less": 0,
+          "excess": 0,
+          "actualprofit": 0,
+          "expectedprofit": 0
+        },
+        "chicken": {
+          "id": "1",
+          "openingstock": "0",
+          "closingstock": "0",
+          "sellingprice": "0",
+          "buyingprice": "0",
+          "waste": "0",
+          "debts": "0",
+          "sales": "0",
+          "comments": "",
+          "expectedsales": 0,
+          "less": 0,
+          "excess": 0,
+          "actualprofit": 0,
+          "expectedprofit": 0
+        },
+        "mutton": {
+          "id": "1",
+          "openingstock": "0",
+          "closingstock": "0",
+          "sellingprice": "0",
+          "buyingprice": "0",
+          "waste": "0",
+          "debts": "0",
+          "sales": "0",
+          "comments": "",
+          "expectedsales": 0,
+          "less": 0,
+          "excess": 0,
+          "actualprofit": 0,
+          "expectedprofit": 0
+        }
+      }
+    ]
+  ]
+}
