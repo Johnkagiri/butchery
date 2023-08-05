@@ -9,10 +9,12 @@
 </head>
 <body>
 <section id="body">
+    <label for="day">Date: </label>
+    <input type="text" id="day" >
     <form id="mainform">
         <div id="beef">
             <h3>BEEF</h3>
-            <div id="stock">
+            <div id="bstock">
                 <div>
                     <h4>Opening Stock</h4>
                          <input type="number" id="bopeningStock" value=0>                   
@@ -53,7 +55,7 @@
     
         <div id="pork">
             <h3>PORK</h3>
-            <div id="stock">
+            <div id="pstock">
                 <div>
                     <h4>Opening Stock</h4>
                         <input type="number" id="popeningStock">   
@@ -166,10 +168,18 @@
         </div>
    
     <input type="submit" value="CALCULATE" /><br>
-    <label for="date">Search by date: </label><br>
-<input type="text" id="date" value="4/august/2023">
+    
 </form>
-
+<div>
+    <label for="date">Search by date: </label><br><button id="search">Search</button><button id="delete"></button>
+        <input type="text" id="date" value="5/August/2023">
+        <div id="result">
+             <p>Date: <span id="rdate"></span></p>
+        <!-- <div id="rbeef"></div><div id="rpork"></div><div id="rchicken"></div><div id="rmutton"></div> -->
+        </div>
+       
+        
+    </div>
     </section>
 </body>
 </html>

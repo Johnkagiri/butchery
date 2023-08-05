@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const bsaleskg = bopening - bclosing - bwaste;
       const bsalescash = bsaleskg * bselling - bdebt;
       const bexcess = bactualsale - bsalescash;
-      console.log(bexcess);
+      //console.log(bexcess);
 
       document.querySelector("#bexpected").textContent = bsalescash;
       document.querySelector("#bactual").textContent = bactualsale;
@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const psaleskg = popening - pclosing - pwaste;
       const psalescash = psaleskg * pselling - pdebt;
       const pexcess = pactualsale - psalescash;
-      console.log(pexcess);
+      //console.log(pexcess);
 
       document.querySelector("#pexpected").textContent = psalescash;
       document.querySelector("#pactual").textContent = pactualsale;
@@ -54,7 +54,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const csalescash = csaleskg * cselling - cdebt;
       const cexcess = cactualsale - csalescash;
 
-      console.log(cexcess);
+      //console.log(cexcess);
       document.querySelector("#cexpected").textContent = csalescash;
       document.querySelector("#cactual").textContent = cactualsale;
       document.querySelector("#cexcess").textContent = cexcess;
@@ -72,7 +72,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const msaleskg = mopening - mclosing - mwaste;
       const msalescash = msaleskg * mselling - mdebt;
       const mexcess = mactualsale - msalescash;
-      console.log(new Date().toISOString());
+      //console.log(new Date().toISOString());
 
       document.querySelector("#mexpected").textContent = msalescash;
       document.querySelector("#mactual").textContent = mactualsale;
@@ -103,87 +103,100 @@ document.addEventListener("DOMContentLoaded", () => {
         return `${day}/${month}/${year}`;
       }
       const formattedDate = getCurrentFormattedDate();
-      console.log(formattedDate);
 
-      data = [
-        {
-          id: "1",
-          date: formattedDate.toLowerCase(),
-          beef: {
-            openingstock: bopening,
-            closingstock: bclosing,
-            sellingprice: bselling,
-            buyingprice: bbuy,
-            waste: bwaste,
-            debts: bdebt,
-            sales: bactualsale,
-            comments: bcomment,
-            expectedsales: bsalescash,
-            less: 0,
-            excess: bexcess,
-            actualprofit: 0,
-            expectedprofit: 0,
-          },
-          pork: {
-            id: "1",
-            openingstock: popening,
-            closingstock: pclosing,
-            sellingprice: pselling,
-            buyingprice: pbuy,
-            waste: pwaste,
-            debts: pdebt,
-            sales: pactualsale,
-            comments: pcomment,
-            expectedsales: psalescash,
-            less: 0,
-            excess: pexcess,
-            actualprofit: 0,
-            expectedprofit: 0,
-          },
-          chicken: {
-            id: "1",
-            openingstock: copening,
-            closingstock: cclosing,
-            sellingprice: cselling,
-            buyingprice: cbuy,
-            waste: cwaste,
-            debts: cdebt,
-            sales: cactualsale,
-            comments: ccomment,
-            expectedsales: csalescash,
-            less: 0,
-            excess: cexcess,
-            actualprofit: 0,
-            expectedprofit: 0,
-          },
-          mutton: {
-            id: "1",
-            openingstock: copening,
-            closingstock: cclosing,
-            sellingprice: cselling,
-            buyingprice: cbuy,
-            waste: cwaste,
-            debts: cdebt,
-            sales: cactualsale,
-            comments: ccomment,
-            expectedsales: csalescash,
-            less: 0,
-            excess: cexcess,
-            actualprofit: 0,
-            expectedprofit: 0,
-          },
-        },
-      ];
+      document.querySelector("#day").value = formattedDate;
+      console.log(document.querySelector("#day").value);
 
-      fetch("http://localhost:8080/data", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
+      data = {
+        id: "",
+        date: document.querySelector("#day").value.toLowerCase(),
+        beef: {
+          openingstock: bopening,
+          closingstock: bclosing,
+          sellingprice: bselling,
+          buyingprice: bbuy,
+          waste: bwaste,
+          debts: bdebt,
+          sales: bactualsale,
+          comments: bcomment,
+          expectedsales: bsalescash,
+          less: 0,
+          excess: bexcess,
+          actualprofit: 0,
+          expectedprofit: 0,
         },
-        body: JSON.stringify(data),
-      })
+        pork: {
+          openingstock: popening,
+          closingstock: pclosing,
+          sellingprice: pselling,
+          buyingprice: pbuy,
+          waste: pwaste,
+          debts: pdebt,
+          sales: pactualsale,
+          comments: pcomment,
+          expectedsales: psalescash,
+          less: 0,
+          excess: pexcess,
+          actualprofit: 0,
+          expectedprofit: 0,
+        },
+        chicken: {
+          openingstock: copening,
+          closingstock: cclosing,
+          sellingprice: cselling,
+          buyingprice: cbuy,
+          waste: cwaste,
+          debts: cdebt,
+          sales: cactualsale,
+          comments: ccomment,
+          expectedsales: csalescash,
+          less: 0,
+          excess: cexcess,
+          actualprofit: 0,
+          expectedprofit: 0,
+        },
+        mutton: {
+          openingstock: copening,
+          closingstock: cclosing,
+          sellingprice: cselling,
+          buyingprice: cbuy,
+          waste: cwaste,
+          debts: cdebt,
+          sales: cactualsale,
+          comments: ccomment,
+          expectedsales: csalescash,
+          less: 0,
+          excess: cexcess,
+          actualprofit: 0,
+          expectedprofit: 0,
+        },
+      };
+      fetch("http://localhost:8080/data")
         .then((res) => res.json())
-        .then((data) => {});
+        .then((detail) => {
+          const date = detail.find((element) => {
+            if (
+              element.date == document.querySelector("#day").value.toLowerCase()
+            ) {
+              return true;
+            } else {
+              return false;
+            }
+          });
+          if (!date) {
+            fetch("http://localhost:8080/data", {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json",
+              },
+              body: JSON.stringify(data),
+            })
+              .then((res) => res.json())
+              .then((data) => {});
+          } else {
+            alert("Date exists");
+          }
+        });
     }
     beefcalculation();
   });
@@ -193,13 +206,68 @@ document.addEventListener("DOMContentLoaded", () => {
       .then((detail) => {
         const specific = detail.find((element) => {
           const inputDate = document.querySelector("#date").value;
-          console.log(element.date);
-          if (element.date == "4/august/2023") {
+          console.log(inputDate.toLowerCase());
+          if (element.date == inputDate.toLowerCase()) {
             return true;
           }
         });
-        console.log(specific);
+        console.log(specific.id);
+        document.querySelector("#result").innerHTML = `
+        <div id='innerresult'>
+           <div id='rbeef'>
+             <h4>BEEF</h4>
+              <p>Expected sales: ${specific.beef.expectedsales}</p>
+              <p>Actual sales: ${specific.beef.sales}</p>
+              <p>excess of: ${specific.beef.excess}</p>
+              <p></p>
+            </div>
+            <div id='rpork'>
+            <h4>PORK</h4>
+              <p>Expected sales: ${specific.pork.expectedsales}</p>
+              <p>Actual sales: ${specific.pork.sales}</p>
+              <p>excess of: ${specific.pork.excess}</p>
+              <p></p>
+            </div>
+            <div id='rchicken'>
+            <h4>CHICKEN</h4>
+              <p>Expected sales: ${specific.chicken.expectedsales}</p>
+              <p>Actual sales: ${specific.chicken.sales}</p>
+              <p>excess of: ${specific.chicken.excess}</p>
+              <p></p>
+            </div>
+            <div id='rmutton'>
+            <h4>MUTTON</h4>
+              <p>Expected sales: ${specific.mutton.expectedsales}</p>
+              <p>Actual sales: ${specific.mutton.sales}</p>
+              <p>excess of: ${specific.mutton.excess}</p>
+              <p></p>
+            </div>
+
+        </div>
+             `;
+        document.querySelector("#delete").textContent = "DELETE";
+        document.querySelector("#delete").addEventListener("click", () => {
+          deletedata(specific.id);
+        });
       });
   }
-  getData();
+  document.querySelector("#search").addEventListener("click", () => getData());
+
+  function deletedata(id) {
+    fetch(`http://localhost:8080/data/${id}`, {
+      method: "DELETE",
+      headers: {},
+    })
+      .then((response) => {
+        if (response.ok) {
+          console.log("Object deleted successfully");
+          document.querySelector("#innerresult").remove();
+        } else {
+          console.error("Failed to delete object");
+        }
+      })
+      .catch((error) => {
+        console.error("Error:", error);
+      });
+  }
 });

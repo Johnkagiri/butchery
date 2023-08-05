@@ -5,15 +5,13 @@ body{
 form{
     padding: 10px;
 }
-#body{
+#mainform{
     display: grid;
     grid-template-columns: auto auto;
     row-gap: 50px;
     column-gap: 20px;
 }
-#beef, #pork, #chicken, #mutton{
-    
-}
+
 #beef{
     background-color: brown;
     
@@ -27,8 +25,42 @@ form{
 #mutton{
     background-color: aqua;
 }
-#stock{
+#bstock, #pstock, #cstock, #mstock{
     display: grid;
     grid-template-columns: auto auto;
     column-gap: 10px;
 }
+#innerresult{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    column-gap: 10px;
+}
+#rbeef{
+    background-color: brown;
+}
+#rpork{
+    background-color: blue;
+}
+#rchicken{
+    background-color: yellowgreen;
+}
+#rmutton{
+    background-color: aqua;
+}
+/* document.querySelector("#rbeef").innerHTML = `
+<h4>BEEF</h4>
+<p>Expected sales: ${specific.beef.expectedsales}</p>
+<p>Actual sales: ${specific.beef.sales}</p>
+<p>excess of: ${specific.beef.excess}</p>
+<p></p>
+`; */
+/* <div>
+<label for="date">Search by date: </label><br><button id="search">Search</button><button id="delete"></button>
+    <input type="text" id="date" value="5/August/2023">
+    <div>
+         <p>Date: <span id="rdate"></span></p>
+    <div id="rbeef"></div><div id="rpork"></div><div id="rchicken"></div><div id="rmutton"></div>
+    </div>
+   
+    
+</div> */
