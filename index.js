@@ -213,8 +213,10 @@ document.addEventListener("DOMContentLoaded", () => {
             return false;
           }
         });
-        console.log(specific.id);
-        document.querySelector("#result").innerHTML = `
+
+        console.log();
+        if (specific) {
+          document.querySelector("#result").innerHTML = `
         <div id='innerresult'>
            <div id='rbeef'>
              <h4>BEEF</h4>
@@ -247,10 +249,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
         </div>
              `;
-        document.querySelector("#delete").textContent = "DELETE";
-        document.querySelector("#delete").addEventListener("click", () => {
-          deletedata(specific.id);
-        });
+          document.querySelector("#delete").textContent = "DELETE";
+          document.querySelector("#delete").addEventListener("click", () => {
+            deletedata(specific.id);
+          });
+        } else if (!specific) {
+          alert("Date does not exist");
+        }
       });
   }
   document.querySelector("#search").addEventListener("click", () => getData());

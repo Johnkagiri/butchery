@@ -127,6 +127,70 @@
         "actualprofit": 0,
         "expectedprofit": 0
       }
+    },
+    {
+      "id": 3,
+      "date": "6/august/2023",
+      "beef": {
+        "openingstock": "0",
+        "closingstock": "0",
+        "sellingprice": "0",
+        "buyingprice": "0",
+        "waste": "0",
+        "debts": "0",
+        "sales": "0",
+        "comments": "",
+        "expectedsales": 0,
+        "less": 0,
+        "excess": 0,
+        "actualprofit": 0,
+        "expectedprofit": 0
+      },
+      "pork": {
+        "openingstock": "",
+        "closingstock": "",
+        "sellingprice": "0",
+        "buyingprice": "0",
+        "waste": "0",
+        "debts": "0",
+        "sales": "0",
+        "comments": "",
+        "expectedsales": 0,
+        "less": 0,
+        "excess": 0,
+        "actualprofit": 0,
+        "expectedprofit": 0
+      },
+      "chicken": {
+        "openingstock": "0",
+        "closingstock": "0",
+        "sellingprice": "0",
+        "buyingprice": "0",
+        "waste": "0",
+        "debts": "0",
+        "sales": "0",
+        "comments": "",
+        "expectedsales": 0,
+        "less": 0,
+        "excess": 0,
+        "actualprofit": 0,
+        "expectedprofit": 0
+      },
+      "mutton": {
+        "openingstock": "0",
+        "closingstock": "0",
+        "sellingprice": "0",
+        "buyingprice": "0",
+        "waste": "0",
+        "debts": "0",
+        "sales": "0",
+        "comments": "",
+        "expectedsales": 0,
+        "less": 0,
+        "excess": 0,
+        "actualprofit": 0,
+        "expectedprofit": 0
+      }
     }
   ]
 }
