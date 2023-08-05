@@ -209,6 +209,8 @@ document.addEventListener("DOMContentLoaded", () => {
           console.log(inputDate.toLowerCase());
           if (element.date == inputDate.toLowerCase()) {
             return true;
+          } else {
+            return false;
           }
         });
         console.log(specific.id);

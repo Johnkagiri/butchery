@@ -1,6 +1,6 @@
 ## Name of project
 
-The name of this project is 'butchery helper'
+The name of this project is 'Butchery Helper'
 
 ## projects links
 
@@ -13,7 +13,7 @@ No installations is reqiured for this project all one has to do is to run the gi
 
 ## How To Use It
 
-In the application there is an input area to put opening stock, closing stock, buying price, selling price, waste, amount of debts, and the application will calculate the expected sales and from your actualsale excess or less will be calculated. The application saves the record and one can search the record using dates.
+In the application there is an input area to put opening stock, closing stock, buying price, selling price, waste, amount of debts, and the application will calculate the expected sales and from your actualsale excess or less will be calculated. The application saves the record and one can search the record using dates on clicking the search button. There is a delete button and on clicking it one completly deletes the records with the specific search date.
 
 ## NB
 
